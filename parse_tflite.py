@@ -1,8 +1,8 @@
 from tflite import Model
 from tflite.BuiltinOperator import BuiltinOperator 
 
-with open("./mobilenet_v1_1.0_224.tflite", "rb") as f:
-    model = Model.Model.GetRootAsModel(f, 0)
+with open("mobilenet_v1_1.0_224.tflite", "rb") as f:
+    model = Model.Model.GetRootAsModel(f.read(), 0)
 
     # Code borrowed from https://github.com/apache/incubator-tvm
     ops = {}
